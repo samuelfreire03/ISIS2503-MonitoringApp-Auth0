@@ -4,7 +4,7 @@
 <div class="content">
     <div class="">
         <div class="page-header-title">
-            <h4 class="page-title">Variables</h4>
+            <h4 class="page-title">Pacientes</h4>
             <div style="text-align:right;">
                 <button type="button" class="btn btn-success waves-effect waves-light"
                         onClick=" window.location.href='/variablecreate' " style="text-align:center;">+
@@ -25,20 +25,14 @@
                     <table class="table table-hover">
                         <thead>
                         <tr style="color:#0E2EB0">
-                            <th>Variable</th>
+                            <th>Paciente</th>
                         </tr>
                         </thead>
                         <tbody>
 
                         {% for variable in variable_list %}
                         <tr>
-                            <td class="d-flex justify-content-between">
-                                {{ variable.name }}
-                                <button type="button" class="btn btn-primary waves-effect waves-light"
-                                        onClick=" window.location.href='/variable/{{ variable.id }}' ">
-                                    Detail
-                                </button>
-                            </td>
+                            <td>{{ variable.name }}</td>
                         </tr>
                         {% endfor %}
 
