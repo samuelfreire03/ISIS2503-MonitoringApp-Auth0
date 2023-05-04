@@ -19,3 +19,7 @@ def get_variable_by_name(name):
     except:
         variable = None
         return (variable)
+    
+def get_variable(id):
+    variable = Variable.objects.raw("SELECT * FROM variables_variable WHERE id=%s" % id)[0]
+    return (variable)
